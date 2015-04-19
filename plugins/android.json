@@ -32,10 +32,10 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.device": {
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.runvnc.ghrun"
         },
-        "org.apache.cordova.console": {
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.runvnc.ghrun"
         },
         "org.apache.cordova.file": {
