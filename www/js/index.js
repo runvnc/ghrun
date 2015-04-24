@@ -19,11 +19,8 @@ var app = {
     },
 
     initApp: function() {
-      alert('initad');
       app.initAd();
-      alert('createbanner');
       window.plugins.AdMob.createBannerView();
-      alert('shown');
     },
     initAd: function() {
       window.plugins.AdMob.setOptions({
