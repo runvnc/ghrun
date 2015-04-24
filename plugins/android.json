@@ -47,6 +47,10 @@
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -64,7 +68,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
@@ -80,30 +84,6 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"com.runvnc.ghrun.permission.C2D_MESSAGE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-sdk android:minSdkVersion=\"11\" android:targetSdkVersion=\"19\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-feature android:name=\"android.hardware.autofocus\" android:required=\"true\" />",
                             "count": 1
                         },
                         {
@@ -151,6 +131,14 @@
                         {
                             "xml": "<activity android:exported=\"false\" android:launchMode=\"singleInstance\" android:name=\"de.appplant.cordova.plugin.notification.ClickActivity\" android:theme=\"@android:style/Theme.NoDisplay\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
                         }
                     ],
                     "/*": [
@@ -165,18 +153,21 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
                         }
                     ]
                 }
             },
             "config.xml": {
                 "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"OpenTokPlugin\"><param name=\"android-package\" value=\"com.tokbox.cordova.OpenTokAndroidPlugin\" /></feature>",
-                            "count": 1
-                        }
-                    ]
+                    "/*": []
                 }
             }
         }
@@ -186,9 +177,6 @@
             "PACKAGE_NAME": "com.runvnc.ghrun"
         },
         "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "com.runvnc.ghrun"
-        },
-        "com.tokbox.cordova.opentok": {
             "PACKAGE_NAME": "com.runvnc.ghrun"
         },
         "cordova-plugin-camera": {
@@ -217,10 +205,19 @@
         },
         "org.apache.cordova.statusbar": {
             "PACKAGE_NAME": "com.runvnc.ghrun"
+        },
+        "com.rjfun.cordova.plugin.admob": {
+            "PACKAGE_NAME": "com.runvnc.ghrun"
         }
     },
     "dependent_plugins": {
         "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.runvnc.ghrun"
+        },
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.runvnc.ghrun"
+        },
+        "com.google.admobsdk": {
             "PACKAGE_NAME": "com.runvnc.ghrun"
         }
     }

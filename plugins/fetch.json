@@ -1,0 +1,20 @@
+{
+    "com.rjfun.cordova.plugin.admob": {
+        "source": {
+            "type": "registry",
+            "id": "com.rjfun.cordova.plugin.admob"
+        }
+    },
+    "com.google.admobsdk": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.admobsdk"
+        }
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.playservices@19.0.0"
+        }
+    }
+}

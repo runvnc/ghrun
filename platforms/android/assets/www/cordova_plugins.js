@@ -239,6 +239,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.rjfun.cordova.plugin.admob/www/AdMob.js",
+        "id": "com.rjfun.cordova.plugin.admob.AdMob",
+        "clobbers": [
+            "window.plugins.AdMob"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
@@ -251,7 +258,6 @@ module.exports.metadata =
 {
     "com.ionic.keyboard": "1.0.4",
     "com.phonegap.plugins.PushPlugin": "2.4.0",
-    "com.tokbox.cordova.opentok": "1.0.2",
     "cordova-plugin-camera": "1.0.1-dev",
     "cordova-plugin-geolocation": "1.0.1-dev",
     "de.appplant.cordova.plugin.local-notification": "0.8.1",
@@ -261,7 +267,10 @@ module.exports.metadata =
     "org.apache.cordova.dialogs": "0.3.0",
     "org.apache.cordova.file": "1.3.3",
     "org.apache.cordova.statusbar": "0.1.10",
-    "org.apache.cordova.device": "0.3.0"
+    "com.rjfun.cordova.plugin.admob": "2.1.7",
+    "org.apache.cordova.device": "0.3.0",
+    "com.google.playservices": "19.0.0",
+    "com.google.admobsdk": "6.12.2"
 }
 // BOTTOM OF METADATA
 });
