@@ -1,9 +1,24 @@
 window.onerror = function(msg, url, line) {
-  var idx = url.lastIndexOf("/");
-  if(idx > -1) {url = url.substring(idx+1);}
+  //var idx = url.lastIndexOf("/");
+  //if(idx > -1) {url = url.substring(idx+1);}
   alert("ERROR in " + url + " (line #" + line + "): " + msg);
   return false; //suppress Error Alert;
 };
+
+function req(url, done) {
+  var myreq = new XMLHttpRequest;
+  myreq.open('GET', url, true);
+  myreq.responseType = 'text';
+  myreq.send( );
+  myreq.onload = function(e) {
+    if (this.status == 200) {
+      done(this.response);
+    } else {
+      alert(url + ' status ' + this.status);
+      done(this.response);
+    }
+  }
+}
 
 var app = {
     // Application Constructor
@@ -44,10 +59,17 @@ var app = {
     },
 
     onGo: function() {
-        var frm = document.getElementById('frm');
+        //var div = document.createElement('div');
         var proj = document.getElementById('run').value;
-        frm.src = 'https://raw.githubusercontent.com/'+proj+'/master/index.html?zz='+(new Date()).getTime();
-        
+
+        var url = 'http://raw.githubusercontent.com/'+
+            proj+'/master/main.html?zz='+(new Date()).getTime();
+        req(url, function(res) {
+          var frm = document.getElementById('frm');
+          frm.srcdoc = res;
+          //document.body.appendChild(div); 
+          //div.innerHTML = res;
+        });
         /*
         var proj = document.getElementById('run').value;
         var script = document.createElement('script');
